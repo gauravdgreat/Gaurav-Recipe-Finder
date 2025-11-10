@@ -1,73 +1,31 @@
-# React + TypeScript + Vite
+# AI Recipe Finder 🍲🤖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI Recipe Finder** is a smart and intuitive web application that helps you discover the perfect dishes based on the ingredients you have and the type of cuisine you prefer. Powered by **Google Gemini AI**, the app generates personalized recipe suggestions in seconds, making cooking easier and more fun.  
 
-Currently, two official plugins are available:
+Whether you're a home cook looking for quick dinner ideas or a foodie experimenting with new dishes, this app transforms your ingredients into delicious recipes — all with the power of AI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Key Features:**
+- 🥕 **Ingredient-based search:** Enter what you have at home and get recipe suggestions.
+- 🍛 **Cuisine & dietary preferences:** Filter recipes by food type or diet (vegan, keto, etc.).
+- ⭐ **Favorites & save recipes:** Keep track of your favorite dishes.
+- 🤖 **AI-powered recommendations:** Gemini AI provides smart suggestions and tips.
+- 📱 **Responsive design:** Works seamlessly on mobile, tablet, and desktop.
 
-## React Compiler
+**Tech Stack:**
+- **Frontend:** React + TypeScript + Vite  
+- **AI Integration:** Google Gemini AI  
+- **Routing & Auth:** React Router, Firebase/AuthContext  
+- **Deployment:** Netlify / Vercel ready  
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Transform the way you cook — let AI guide your culinary creativity! 🚀
 
-## Expanding the ESLint configuration
+<img width="1919" height="934" alt="Screenshot 2025-11-10 235407" src="https://github.com/user-attachments/assets/fd7e65bf-cd93-4f14-ba6e-4ea70612ea59" />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<img width="1919" height="943" alt="Screenshot 2025-11-11 000138" src="https://github.com/user-attachments/assets/f38793f9-36b0-494d-91a7-4badff2f62a1" />
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<img width="1919" height="947" alt="Screenshot 2025-11-11 000154" src="https://github.com/user-attachments/assets/342023d0-af30-4f70-86a1-0c9a468425c1" />
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<img width="1918" height="995" alt="Screenshot 2025-11-11 000219" src="https://github.com/user-attachments/assets/73c8ae75-3c90-4ced-958c-398525217c25" />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
